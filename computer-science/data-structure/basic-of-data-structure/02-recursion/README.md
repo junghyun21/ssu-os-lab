@@ -51,85 +51,168 @@
 
 ### 재귀 호출 예제
 
-> 팩토리얼
+- [팩토리얼 (factorial)](#팩토리얼-factorial)
+- [거듭 제곱 (exponentiation)](#거듭-제곱-exponentiation)
+- [피보나치(fibonacci) 수열](#하노이-탑-hanoi-tower)
+- [힐베르트(힐버트, Hilbert) 곡선](#힐베르트힐버트-hilbert-곡선)
+- [기타 예제](#기타-예제)
+
+<br>
+
+#### *팩토리얼 (factorial)*
+
 
 $$n! = n \times (n - 1) \times (n - 2) \times \dots \times 1$$
 
 
-[source](./factorial.c)
+[source](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/factorial.c)
 
 - 입력 받은 값(n)의 팩토리얼(n!) 계산 결과 출력하기
 - 일반적으로 팩토리얼은 0 이상의 정수에 대해서만 정의함
 - $0! = 1$: 일반적으로 0 팩토리얼은 1이라고 정의함
 
-    ![img](./img/factorial.png)
+    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/factorial.png)
 
 <br>
 
-> 거듭 제곱
+#### *거듭 제곱 (exponentiation)*
 
 $$a^n = a \times a \times \dots \times a$$
 
-[source](./exponentiation.c)
+[source](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/exponentiation.c)
 
 - 밑(base)과 지수(exp)를 입력받아 거듭제곱 계산 결과 출력하기
 - $a^0 = 1$: 어떤 수를 0 제곱하면 항상 1이 됨
 
-    ![img](./img/exponentiation.png)
+    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/exponentiation.png)
 
 <br>
 
-> 피보나치 수열
+#### *피보나치(fibonacci) 수열*
 
 피보나치 수열은 첫 번째와 두 번째 항이 1이며, 그 뒤의 모든 항은 바로 앞의 두 항의 합으로 이루어진 수열이다. 이 수열의 요소들은 1, 1, 2, 3, 5, 8, 13, ... 순으로 생성된다.
 
-$$F_n = F_{n-1} + F_{n-2} \\ F_1 = F_2 = 1, \quad F_0 = 0$$
+$$F_n = F_{n-1} + F_{n-2} \newline F_1 = F_2 = 1, \quad F_0 = 0$$
 
-[source1](./fibonacci_1.c)
-
-[source2](./fibonacci_2.c)
+[source1](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/fibonacci_1.c)  
+[source2](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/fibonacci_2.c)
 
 - 피보나치 수열의 항의 개수(n)를 입력받아 해당 수열 출력하기
 - 이 때, 항의 개수는 1개 이상이라고 가정
 - 수열의 첫번째 항부터 출력 (0번째 항의 값은 0)
 
-    ![img](./img/fibonacci.png)
+    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/fibonacci.png)
 
 <br>
 
-> 하노이 탑
+#### *하노이 탑 (Hanoi tower)*
 
-[source](./hanoi_tower.c)
+```
+- 3개의 기둥이 존재하고, 처음에는 모든 원판이 첫 번째 기둥에 크기 순으로 쌓여있음
+- 최소한의 움직임으로 모든 원판을 세 번째 기둥으로 이동시켜야함
+- 한 번에 하나의 원판만 옮길 수 있음
+- 작은 원판 위에 큰 원판을 올릴 수 없음
+```
 
 - 하노이 탑의 원판 개수(n)를 입력받아 하노이 탑 문제 해결과정 출력하기
-- 알고리즘
+- 코드 기본 정보
 
-    ![img](./img/hanoi_algorithm1.png)
+    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm1.png)
 
-    하노이 탑의 세 개의 기둥을 **tower 변수에 저장하고, 각 기둥의 크기를 입력 받은 원판의 개수(n)만큼 동적 할당
+    - 하노이 탑의 세 개의 기둥을 **tower 변수에 저장하고, 각 기둥의 크기를 입력 받은 원판의 개수(n)만큼 동적 할당
 
-    - tower[i][0]: 기둥 내에 위치한 원판 중 가장 맨 위에 있는 원판 값을 저장한 인덱스
-    - *tower[0]: 첫번째 기둥, 초기 상태에 모든 원판이 위치한 기둥
-    - *tower[1]: 두번째 기둥, 가운데에 위치한 기둥
-    - *tower[2]: 세번째 기둥, 최종 상태에 모든 원판이 위치한 기둥
+        - tower[i][0]: 기둥 내에 위치한 원판 중 가장 맨 위에 있는 원판 값을 저장한 인덱스
+        - *tower[0]: 첫번째 기둥, 초기 상태에 모든 원판이 위치한 기둥
+        - *tower[1]: 두번째 기둥, 가운데에 위치한 기둥
+        - *tower[2]: 세번째 기둥, 최종 상태에 모든 원판이 위치한 기둥  
 
-    ![img](./img/hanoi_algorithm2.png)
+    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm2.png)
 
-    하노이탑 초기 상태
+    - 하노이탑 초기 상태
 
-    - **tower 내 모든 값은 원판의 크기를 나타냄 (값이 클수록 원판의 크기가 큼)
-    - 값이 0이라면 해당 층에는 원판이 없는 상태
-    - tower[0][0]은 첫번째 기둥에 위치한 원판 중 가장 위에 있는 원판의 인덱스인 N
-    - tower[1][0]과 tower[2][0]은 두번째, 세번째 기둥 내에 원판이 없으므로 0
+        - **tower 내 모든 값은 원판의 크기를 나타냄 (값이 클수록 원판의 크기가 큼)
+        - 값이 0이라면 해당 층에는 원판이 없는 상태
+        - tower[0][0]은 첫번째 기둥에 위치한 원판 중 가장 위에 있는 원판의 인덱스인 N
+        - tower[1][0]과 tower[2][0]은 두번째, 세번째 기둥 내에 원판이 없으므로 0
 
-    ![img](./img/hanoi_algorithm3.png)
+    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm3.png)
 
-    하노이탑 최종 상태
+    - 하노이탑 최종 상태
 
-    - 세번째 기둥(*tower[2])에 모든 원판이 이동한 상태
+        - 세번째 기둥(*tower[2])에 모든 원판이 이동한 상태
 
-    ![img](./img/hanoi_flowchart.jpg)
+[source1](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/hanoi_tower.c)
 
-    ![img](./img/hanoi.png)
+- 직접 하노이 탑의 규칙을 세분화하여 작성한 코드
+- 형태만 재귀일뿐 실제로 재귀의 장점을 하나도 활용하지 못함
+    
+    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_flowchart.jpg)
 
-<br>
+[source2](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/hanoi_tower2.c)
+
+- 재귀의 장점을 살린 코드
+- 큰 문제를 작은 문제로 세분화하여 해결
+    ```
+    1. n-1개의 원판을 경유지인 End를 활용하여 Start에서 To로 이동
+    2. 가장 큰 원판을 한 번에 Start에서 End로 이동
+    3. n-1개의 원판을 경유지인 Start를 활용하여 To에서 End로 이동
+    ```
+
+    $원판의 이동 횟수 = (2^{n-1} - 1) + 1 + (2^{n-1} - 1) = 2^n - 1$
+
+    - 초기 상태
+
+        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm4.png)
+
+    - 1단계
+    
+        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm5.png)
+    
+    - 2단계
+
+        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm6.png)
+
+    - 3단계
+
+        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm7.png)
+
+- ex. 원판의 개수(n)가 4개일 때
+
+    - 초기 상태
+
+        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_ex1.png)
+
+    - 네 번째 원판을 가장 큰 원판으로 보았을 때 (n)
+
+        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_ex2.png)
+
+        - 출발지 = A
+        - 경유지 = B
+        - 도착치 = C
+
+    - 세 번째 원판을 가장 큰 원판으로 보았을 때 (n - 1)
+
+        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_ex3.png)
+
+        - 출발지 = B
+        - 경유지 = A
+        - 도착치 = C
+
+    - 두 번째 원판을 가장 큰 원판으로 보았을 때 (n - 2)
+
+        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_ex4.png)
+
+        - 출발지 = A
+        - 경유지 = B
+        - 도착치 = C
+
+    - 첫 번째 원판을 가장 큰 원판으로 보았을 때 (n - 3)
+
+        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_ex5.png)
+
+        - 출발지 = A
+        - 도착치 = C
+
+- 실행 결과
+
+    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi.png)
