@@ -65,13 +65,13 @@
 $$n! = n \times (n - 1) \times (n - 2) \times \dots \times 1$$
 
 
-[source](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/factorial.c)
+[source](./factorial.c)
 
 - 입력 받은 값(n)의 팩토리얼(n!) 계산 결과 출력하기
 - 일반적으로 팩토리얼은 0 이상의 정수에 대해서만 정의함
 - $0! = 1$: 일반적으로 0 팩토리얼은 1이라고 정의함
 
-    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/factorial.png)
+    ![img](./img/factorial.png)
 
 <br>
 
