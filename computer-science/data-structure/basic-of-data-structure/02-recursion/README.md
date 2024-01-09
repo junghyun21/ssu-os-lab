@@ -79,12 +79,12 @@ $$n! = n \times (n - 1) \times (n - 2) \times \dots \times 1$$
 
 $$a^n = a \times a \times \dots \times a$$
 
-[source](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/exponentiation.c)
+[source](./exponentiation.c)
 
 - 밑(base)과 지수(exp)를 입력받아 거듭제곱 계산 결과 출력하기
 - $a^0 = 1$: 어떤 수를 0 제곱하면 항상 1이 됨
 
-    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/exponentiation.png)
+    ![img](./img/exponentiation.png)
 
 <br>
 
@@ -94,14 +94,14 @@ $$a^n = a \times a \times \dots \times a$$
 
 $$F_n = F_{n-1} + F_{n-2} \newline F_1 = F_2 = 1, \quad F_0 = 0$$
 
-[source1](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/fibonacci_1.c)  
-[source2](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/fibonacci_2.c)
+[source1](./fibonacci_1.c)  
+[source2](./fibonacci_2.c)
 
 - 피보나치 수열의 항의 개수(n)를 입력받아 해당 수열 출력하기
 - 이 때, 항의 개수는 1개 이상이라고 가정
 - 수열의 첫번째 항부터 출력 (0번째 항의 값은 0)
 
-    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/fibonacci.png)
+    ![img](./img/fibonacci.png)
 
 <br>
 
@@ -117,7 +117,7 @@ $$F_n = F_{n-1} + F_{n-2} \newline F_1 = F_2 = 1, \quad F_0 = 0$$
 - 하노이 탑의 원판 개수(n)를 입력받아 하노이 탑 문제 해결과정 출력하기
 - 코드 기본 정보
 
-    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm1.png)
+    ![img](./img/hanoi_algorithm1.png)
 
     - 하노이 탑의 세 개의 기둥을 **tower 변수에 저장하고, 각 기둥의 크기를 입력 받은 원판의 개수(n)만큼 동적 할당
 
@@ -126,7 +126,7 @@ $$F_n = F_{n-1} + F_{n-2} \newline F_1 = F_2 = 1, \quad F_0 = 0$$
         - *tower[1]: 두번째 기둥, 가운데에 위치한 기둥
         - *tower[2]: 세번째 기둥, 최종 상태에 모든 원판이 위치한 기둥  
 
-    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm2.png)
+    ![img](./img/hanoi_algorithm2.png)
 
     - 하노이탑 초기 상태
 
@@ -135,20 +135,20 @@ $$F_n = F_{n-1} + F_{n-2} \newline F_1 = F_2 = 1, \quad F_0 = 0$$
         - tower[0][0]은 첫번째 기둥에 위치한 원판 중 가장 위에 있는 원판의 인덱스인 N
         - tower[1][0]과 tower[2][0]은 두번째, 세번째 기둥 내에 원판이 없으므로 0
 
-    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm3.png)
+    ![img](./img/hanoi_algorithm3.png)
 
     - 하노이탑 최종 상태
 
         - 세번째 기둥(*tower[2])에 모든 원판이 이동한 상태
 
-[source1](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/hanoi_tower.c)
+[source1](./hanoi_tower.c)
 
 - 직접 하노이 탑의 규칙을 세분화하여 작성한 코드
 - 형태만 재귀일뿐 실제로 재귀의 장점을 하나도 활용하지 못함
     
-    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_flowchart.jpg)
+    ![img](./img/hanoi_flowchart.jpg)
 
-[source2](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/hanoi_tower2.c)
+[source2](./hanoi_tower2.c)
 
 - 재귀의 장점을 살린 코드
 - 큰 문제를 작은 문제로 세분화하여 해결
@@ -162,29 +162,29 @@ $$F_n = F_{n-1} + F_{n-2} \newline F_1 = F_2 = 1, \quad F_0 = 0$$
 
     - 초기 상태
 
-        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm4.png)
+        ![img](./img/hanoi_algorithm4.png)
 
     - 1단계
     
-        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm5.png)
+        ![img](./img/hanoi_algorithm5.png)
     
     - 2단계
 
-        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm6.png)
+        ![img](./img/hanoi_algorithm6.png)
 
     - 3단계
 
-        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_algorithm7.png)
+        ![img](./img/hanoi_algorithm7.png)
 
 - ex. 원판의 개수(n)가 4개일 때
 
     - 초기 상태
 
-        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_ex1.png)
+        ![img](./img/hanoi_ex1.png)
 
     - 네 번째 원판을 가장 큰 원판으로 보았을 때 (n)
 
-        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_ex2.png)
+        ![img](./img/hanoi_ex2.png)
 
         - 출발지 = A
         - 경유지 = B
@@ -192,7 +192,7 @@ $$F_n = F_{n-1} + F_{n-2} \newline F_1 = F_2 = 1, \quad F_0 = 0$$
 
     - 세 번째 원판을 가장 큰 원판으로 보았을 때 (n - 1)
 
-        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_ex3.png)
+        ![img](./img/hanoi_ex3.png)
 
         - 출발지 = B
         - 경유지 = A
@@ -200,7 +200,7 @@ $$F_n = F_{n-1} + F_{n-2} \newline F_1 = F_2 = 1, \quad F_0 = 0$$
 
     - 두 번째 원판을 가장 큰 원판으로 보았을 때 (n - 2)
 
-        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_ex4.png)
+        ![img](./img/hanoi_ex4.png)
 
         - 출발지 = A
         - 경유지 = B
@@ -208,11 +208,11 @@ $$F_n = F_{n-1} + F_{n-2} \newline F_1 = F_2 = 1, \quad F_0 = 0$$
 
     - 첫 번째 원판을 가장 큰 원판으로 보았을 때 (n - 3)
 
-        ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi_ex5.png)
+        ![img](./img/hanoi_ex5.png)
 
         - 출발지 = A
         - 도착치 = C
 
 - 실행 결과
 
-    ![img](https://github.com/junghyun21/ssu-os-lab/edit/main/computer-science/data-structure/basic-of-data-structure/02-recursion/img/hanoi.png)
+    ![img](./img/hanoi.png)
