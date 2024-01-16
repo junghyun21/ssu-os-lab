@@ -4,7 +4,7 @@
 |-------|-------|
 |[Ⅰ. 자료구조 기본 개념](https://github.com/junghyun21/ssu-os-lab/tree/main/computer-science/data-structure/basic-of-data-structure)|[1-1 알고리즘의 성능 분석 및 정확도](https://github.com/junghyun21/ssu-os-lab/tree/main/computer-science/data-structure/basic-of-data-structure/01-performance-analysis-and-complexity) <br>[1-2 재귀(Recursion)](https://github.com/junghyun21/ssu-os-lab/tree/main/computer-science/data-structure/basic-of-data-structure/02-recursion) |
 |[Ⅱ. 배열과 구조체](https://github.com/junghyun21/ssu-os-lab/tree/main/computer-science/data-structure/array-and-structure)|[2-1 문자열](https://github.com/junghyun21/ssu-os-lab/tree/main/computer-science/data-structure/array-and-structure/01-string) <br>[2-2 포인터와 배열과 구조체](https://github.com/junghyun21/ssu-os-lab/tree/main/computer-science/data-structure/array-and-structure/02-pointer) |
-|Ⅲ. 연결 리스트(Linked List)||
+|[Ⅲ. 연결 리스트(Linked List)](https://github.com/junghyun21/ssu-os-lab/tree/main/computer-science/data-structure/linked-list)|[3-1 단순 연결 리스트](https://github.com/junghyun21/ssu-os-lab/tree/main/computer-science/data-structure/linked-list/01-single-linked-list) <br>[3-2 이중 연결 리스트](https://github.com/junghyun21/ssu-os-lab/tree/main/computer-science/data-structure/linked-list/02-doubly-linked-list) |
 |Ⅳ. 스택(Stack)||
 |Ⅴ. 큐(Queue)|우선순위 큐|
 |Ⅵ. 트리(Tree)|힙|
