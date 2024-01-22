@@ -100,7 +100,9 @@ void insert(Node *node, Node *deleteNode)
 
 ### 예제
 
-[[source] 이중 연결 리스트의 생성/삽입/삭제/출력](./doubly_linked_list.c)
+> *이중 연결 리스트의 생성/삽입/삭제/출력*
+
+[source](./doubly_linked_list.c)
 
 - `createNode()`: 새로운 노드 생성
 - `insert()`: 새로운 노드를 특정 위치에 삽입
@@ -108,9 +110,3 @@ void insert(Node *node, Node *deleteNode)
 - `deleteByValue()`: 특정한 값을 가지고 있는 노드 삭제
 - `traverse()`: 연결 리스트를 앞에서부터 순회
 - `traverseInReverse()`: 연결 리스트를 뒤에서부터 순회
-
-<br>
-
-[[source] 학생 정보 저장 및 관리 프로그램](./student_management.c)
-
-- dd
