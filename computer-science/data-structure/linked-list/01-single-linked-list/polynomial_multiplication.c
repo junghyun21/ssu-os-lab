@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define COMPARE(x, y) ((x) < (y)) ? -1 : (((x) == (y)) ? 0 : 1)
-
 // 연결리스트 노드의 구조
 typedef struct Node{
     int coef; // 계수(coefficient)
