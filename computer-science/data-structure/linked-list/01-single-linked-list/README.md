@@ -80,7 +80,9 @@ free(new_node2);
 
 ### 예제
 
-[[source1] 단순 연결 리스트의 생성/삽입/삭제/탐색/출력](./single_linked_list.c)  
+> *단순 연결 리스트의 생성/삽입/삭제/탐색/출력*
+
+[source](./single_linked_list.c)  
 
 - `createNode()`: 새로운 노드 생성
 - `insertHead()`: 새로운 노드를 리스트의 헤더에 삽입
@@ -94,13 +96,38 @@ free(new_node2);
 
 <br>
 
+> *다항식의 덧셈 및 곱셈*
+
+```c
+// 연결리스트 노드의 구조
+typedef struct Node{
+    int coef; // 계수(coefficient)
+    int expon; // 지수(exponent)
+    struct Node *next;
+}Node;
+```
+
 [[source] 다항식의 덧셈](./polynomial_addition.c)
 
-- 
--
+
+- `init()`: 연결 리스트 초기화
+- `insertNodeLast()`: 새로운 노드를 연결 리스트의 마지막에 삽입
+- `polyAdd()`: 각 연결 리스트(다항식)들을 더해서 새로운 연결 리스트에 저장
+- `polyDelete()`: 연결 리스트(다항식) 삭제
+- `polyPrint()`: 연결 리스트를 다항식 형식으로 출력
+- 출력 결과
+
+    ![img](./img/polynomial_addition.png)
 
 <br>
 
 [[source] 다항식의 곱셈](./polynomial_multiplication.c)
 
-- dd
+- `init()`: 연결 리스트 초기화
+- `insertNodeLast()`: 새로운 노드를 연결 리스트의 마지막에 삽입
+- `polyMul()`: 각 연결 리스트(다항식)들을 곱해서 새로운 연결 리스트에 저장
+- `polyDelete()`: 연결 리스트(다항식) 삭제
+- `polyPrint()`: 연결 리스트를 다항식 형식으로 출력
+- 출력 결과
+
+    ![img](./img/polynomial_multiplication.png)
