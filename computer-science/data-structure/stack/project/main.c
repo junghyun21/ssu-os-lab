@@ -15,6 +15,9 @@ int main(int argc, char *argv[])
     // 수식을 프로그램 실행 도중에 받아야 하는 경우: exit 입력 시 프로그램 종료
     if(argc == 1){
         while(!isExit){
+            // 식을 저장했던 곳들 모두 초기화
+            initExpr();
+            
             // 수식 입력받기
             printf("input expression: ");
             fgets(expr, sizeof(expr), stdin);
@@ -42,9 +45,6 @@ int main(int argc, char *argv[])
             // 변환한 식과 수식의 계산 결과 출력
             printExpr(exprType);        
             printResult(exprType);
-
-            // 식을 저장했던 곳들 모두 초기화
-            initExpr();
             
         }
     }
