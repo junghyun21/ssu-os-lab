@@ -89,25 +89,28 @@ void modifyExpr(Token token)
     // 스택의 모든 원소를 검사하고, 괄호 처리가 필요한 경우 괄호처리
     while(temp != NULL){
         // 배열 내 모든 원소를 널문자로 초기화해주었기 때문에, 따로 널문자를 신경 쓸 필요가 없음
-        strcpy(tempMidExpr, "");
+        memset(tempMidExpr, 0, sizeof(tempMidExpr));
 
         // 이전에 진행했던 연산보다 우선순위가 높은 연산자가 들어올 경우, 괄호 처리
         // 연산이 없었던 경우는 무시
-        if(temp->token != NUM && isp[temp->token] < icp[token]){
-            // 괄호 추가
-            tempMidExpr[0] = '(';
-            tempMidExpr[1] = ' ';
-            strcat(tempMidExpr, temp->midExpr);
+        // 이미 괄호가 추가된 수식에는 괄호 추가 하지 않음
+        if(temp->token != NUM && isp[temp->token] <= icp[token]){
+            len = strlen(temp->midExpr);
+            if(temp->midExpr[0] != '(' || temp->midExpr[len - 1] != ')'){
+                // 괄호 추가
+                tempMidExpr[0] = '(';
+                tempMidExpr[1] = ' ';
+                strcat(tempMidExpr, temp->midExpr);
 
-            // temp->midExpr의 널문자 뒤에는 모두 널문자로 초기화되어있다는 보장이 없음
-            len = strlen(tempMidExpr);
-            tempMidExpr[len] = ' ';
-            tempMidExpr[len + 1] = ')';
-            tempMidExpr[len + 2] = '\0';
+                // temp->midExpr의 널문자 뒤에는 모두 널문자로 초기화되어있다는 보장이 없음
+                len = strlen(tempMidExpr);
+                tempMidExpr[len] = ' ';
+                tempMidExpr[len + 1] = ')';
+                tempMidExpr[len + 2] = '\0';
 
-            // 괄호를 추가한 수식으로 변경
-            strcpy(temp->midExpr, tempMidExpr);
-
+                // 괄호를 추가한 수식으로 변경
+                strcpy(temp->midExpr, tempMidExpr);
+            }
         }
 
         temp = temp->link;
@@ -327,7 +330,7 @@ void postfixToInfix()
 
             // 초기화
             i = 0;
-            strcpy(midExpr1, ""); 
+            memset(midExpr1, 0, sizeof(midExpr1));
         }
         // 연산자인 경우
         // 기존의 연산(스택)들을 살펴보고, 우선순위가 낮은 연산에 괄호 처리
@@ -366,8 +369,8 @@ void postfixToInfix()
             // 중간식과 해당 식에서 사용한 연산자(토큰)을 스택에 저장
             toInfixPush(token, midExpr1);
 
-            strcpy(midExpr1, ""); // 초기화
-            strcpy(midExpr2, ""); // 초기화
+            memset(midExpr1, 0, sizeof(midExpr1)); // 초기화
+            memset(midExpr2, 0, sizeof(midExpr2)); // 초기화
         }
     }
 
@@ -410,7 +413,7 @@ void prefixToInfix()
 
             toInfixPush(NUM, midExpr1);
 
-            strcpy(midExpr1, ""); // 초기화
+            memset(midExpr1, 0, sizeof(midExpr1)); // 초기화
         }
         // 연산자인 경우
         // 기존의 연산(스택)들을 살펴보고, 우선순위가 낮은 연산에 괄호 처리
@@ -436,8 +439,8 @@ void prefixToInfix()
             // 중간식과 해당 식에서 사용한 연산자(토큰)을 스택에 저장
             toInfixPush(token, midExpr1);
 
-            strcpy(midExpr1, ""); // 초기화
-            strcpy(midExpr2, ""); // 초기화
+            memset(midExpr1, 0, sizeof(midExpr1)); // 초기화
+            memset(midExpr2, 0, sizeof(midExpr2)); // 초기화
         }
     }
 
