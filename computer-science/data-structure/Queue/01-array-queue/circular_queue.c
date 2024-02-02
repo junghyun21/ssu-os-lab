@@ -9,8 +9,8 @@ typedef struct Element{
 }Element;
 
 Element queue[MAX_QUEUE_SIZE];
-int front = -1;
-int rear = -1;
+int front = 0;
+int rear = 0;
 
 void queueFull(); // 큐가 가득 찼을때 호출되어, 오류 메시지 출력 및 프로그램 종료
 Element queueEmpty(); // 큐가 비어있을 때 호출
