@@ -4,4 +4,4 @@
 
 ![img](./img/queue.png)
 
-큐를 구현하는 방법에는 [배열을 이용하여 구현하는 방법](https://github.com/junghyun21/ssu-os-lab/tree/main/computer-science/data-structure/queue/01-array-queue)과 [연결 리스트를 이용하여 구현하는 방법](ttps://github.com/junghyun21/ssu-os-lab/tree/main/computer-science/data-structure/queue/02-linked-list-queue)이 있다.
+큐를 구현하는 방법에는 배열을 이용하여 구현하는 방법과 연결 리스트를 이용하여 구현하는 방법이 있다. 또한 선형큐와 원형큐의 구조가 있다.
